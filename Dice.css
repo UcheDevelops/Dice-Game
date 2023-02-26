@@ -493,6 +493,7 @@ button:hover {
   }
 
   #winning-scoreInput {
+    top: 95%;
     left: 35%;
   }
 

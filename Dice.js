@@ -13,6 +13,7 @@ const player1_Id = document.getElementById("player1-id");
 const player2_Id = document.getElementById("player2-id");
 const winningScoreInput = document.getElementById("winning-scoreInput");
 const startGame = document.getElementById("start");
+const blurBackground = document.querySelector(".blur_background");
 const instructionIcon = document.querySelector(".instructions");
 var gamePlay = true;
 var winningScore = 50;
@@ -133,17 +134,16 @@ winningScoreInput.addEventListener("change", () => {
 });
 
 startGame.addEventListener("click", (e) => {
-  e.stopPropagation();
   document.getElementsByClassName("how-to-play")[0].style.display = "none";
-  document.querySelector(".blur_background").style.display = "none";
+  blurBackground.style.display = "none";
 });
 
-document.addEventListener("click", () => {
-  document.querySelector(".how-to-play")[0].style.display = "none";
-  document.querySelector(".blur_background").style.display = "none";
-});
+// blurBackground.addEventListener("click", () => {
+//   document.querySelector(".how-to-play")[0].style.display = "none";
+//   blurBackground.style.display = "none";
+// });
 
 instructionIcon.addEventListener("click", () => {
   document.querySelector(".how-to-play").style.display = "block";
-  document.querySelector(".blur_background").style.display = "block";
+  blurBackground.style.display = "block";
 });

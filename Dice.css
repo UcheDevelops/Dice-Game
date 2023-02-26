@@ -1,0 +1,506 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./images/diceImg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
+  background-attachment: fixed;
+  backdrop-filter: blur(3px);
+  height: 100vh;
+  padding: 30px 120px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  height: 100%;
+  background-color: #ffffff15;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 0 10px #000;
+  padding: 5px;
+}
+
+.container h1 {
+  font-size: 2.8em;
+}
+
+.player-box {
+  background-color: #00000025;
+  height: 100%;
+  width: 50%;
+  border: 1px solid #000000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.player-box h1 {
+  color: #fff;
+  text-shadow: 0 2px 2px #000;
+}
+
+.player1-panel {
+  border-radius: 15px 0 0 15px;
+}
+
+.player2-panel {
+  border-radius: 0 15px 15px 0;
+  border-left: none;
+}
+
+.totalscore {
+  font-weight: bold;
+  font-size: 6em;
+  color: red;
+}
+
+.current-score {
+  width: 120px;
+  background-color: #040438;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-size: 50px;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.diceImgbox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 145px;
+  left: 45.5%;
+}
+
+.diceImg {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #fff;
+  margin: 5px;
+  display: none;
+}
+
+button {
+  padding: 12px;
+  font-size: 0.8em;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: center;
+  border: 1px solid #292727;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #000;
+  position: absolute;
+  left: 45%;
+  cursor: pointer;
+}
+
+button img {
+  vertical-align: text-bottom;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.new-gamebtn {
+  top: 45px;
+}
+
+.rolldicebtn {
+  top: 62%;
+}
+
+.hold-btn {
+  top: 75%;
+  left: 45%;
+  padding: 12px 33px;
+}
+
+#winning-scoreInput {
+  width: 200px;
+  height: 39px;
+  padding: 3px;
+  background-color: #040438;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  border: 2px solid #a89696;
+  border-radius: 5px;
+  position: absolute;
+  left: 42.5%;
+  top: 86%;
+}
+
+.active {
+  background-color: rgba(0, 0, 0);
+}
+
+.winner {
+  background-color: #62ed52;
+}
+
+.blur_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  z-index: 5;
+}
+
+.how-to-play {
+  background-color: #000;
+  border: 3px solid #fff;
+  box-shadow: 0 0 20px #000;
+  /* opacity: ; */
+  color: #fff;
+  width: 60%;
+  padding: 20px;
+  border-radius: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  z-index: 10;
+}
+
+.how-to-play h3 {
+  text-decoration: underline;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.how-to-play ul {
+  list-style-position: inside;
+  margin: 15px 0 10px 0;
+}
+
+.how-to-play button#start {
+  color: #000;
+  background-color: #feb200;
+  border: 2px solid #fff;
+  position: unset;
+}
+
+.instructions {
+  background-color: #fff;
+  border: 2px solid #ff0000;
+  border-radius: 5px;
+  padding: 3px;
+  /* width: 60px;
+  height: 60px; */
+  box-shadow: 0px 0 5px #000;
+  position: absolute;
+  top: 7%;
+  left: 11%;
+  z-index: 3;
+  cursor: pointer;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media screen and (max-width: 1200px) {
+  body {
+    padding: 30px 60px;
+  }
+
+  button img {
+    vertical-align: middle;
+    width: 15px;
+  }
+
+  .container h1 {
+    font-size: 2.1em;
+  }
+
+  .diceImgbox {
+    left: 44%;
+  }
+
+  .new-gamebtn {
+    top: 45px;
+    left: 43%;
+  }
+
+  .rolldicebtn {
+    left: 43%;
+  }
+
+  .hold-btn {
+    left: 43%;
+  }
+
+  #winning-scoreInput {
+    width: 180px;
+    left: 41%;
+  }
+
+  .how-to-play {
+    width: 70%;
+    padding: 15px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    left: 15%;
+  }
+
+  .instructions {
+    width: 50px;
+    height: 50px;
+    left: 8%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  body {
+    padding: 30px;
+  }
+
+  .container h1 {
+    font-size: 2em;
+  }
+
+  #winning-scoreInput {
+    left: 40.5%;
+  }
+
+  .how-to-play {
+    font-size: 1.15em;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  body {
+    padding: 30px 15px;
+  }
+
+  button {
+    padding: 11px;
+    font-size: 0.7em;
+  }
+
+  .diceImgbox {
+    left: 43%;
+  }
+
+  .diceImg {
+    width: 90px;
+    height: 90px;
+  }
+
+  .new-gamebtn {
+    left: 42%;
+  }
+
+  .rolldicebtn {
+    left: 42%;
+  }
+
+  .hold-btn {
+    left: 41.5%;
+  }
+
+  #winning-scoreInput {
+    width: 160px;
+    left: 39%;
+  }
+
+  .instructions {
+    left: 4%;
+  }
+
+  .how-to-play {
+    width: 85%;
+    left: 8%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    padding: 10px 15px 50px 15px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 70;
+  }
+
+  .player-box {
+    height: 46%;
+    width: 70%;
+    border-radius: 10px;
+  }
+
+  .player-box h1 {
+    margin-top: 13px;
+  }
+
+  .player2-panel {
+    border-left: 1px solid #000;
+  }
+
+  .player-box .totalscore {
+    font-size: 70px;
+    text-shadow: 0 0 5px #000;
+  }
+
+  .player-box .current-score {
+    font-size: 35px;
+  }
+
+  .instructions {
+    top: 3%;
+    left: 80%;
+  }
+
+  .new-gamebtn {
+    top: 44%;
+    left: 4%;
+    font-size: 10px;
+    padding: 9px 8px;
+  }
+
+  .rolldicebtn {
+    top: 44%;
+    left: 26.5%;
+    font-size: 10px;
+    padding: 9px 8px;
+  }
+
+  .hold-btn {
+    top: 44%;
+    left: 49%;
+    font-size: 10px;
+    padding: 9px 20px;
+  }
+
+  button {
+    border: 2px solid #000;
+    box-shadow: none;
+  }
+
+  #winning-scoreInput {
+    left: 39%;
+    top: 93.5%;
+    font-size: 0.8em;
+  }
+
+  .diceImgbox {
+    background-color: rgba(0, 0, 0, 0.8);
+    gap: 130px;
+    top: 22%;
+    left: 74%;
+  }
+
+  .diceImg {
+    width: 85px;
+    height: 85px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000;
+    /* display: none; */
+  }
+
+  .how-to-play {
+    padding: 5px;
+    width: 85%;
+    left: 8%;
+    font-size: 1.05em;
+    line-height: 1.6;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    padding: 10px 10px 50px 10px;
+  }
+
+  .new-gamebtn {
+    padding: 9px 2px;
+    font-weight: 900;
+  }
+
+  .rolldicebtn {
+    padding: 9px 2px;
+    font-weight: 900;
+  }
+
+  .hold-btn {
+    padding: 9px 10px;
+    font-weight: 900;
+  }
+
+  button:hover {
+    transform: scale(0.9);
+  }
+
+  .how-to-play {
+    width: 90%;
+    left: 6%;
+    font-size: 0.9em;
+    line-height: 2;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .player-box {
+    height: 45%;
+  }
+
+  .new-gamebtn {
+    left: 5%;
+    font-size: 8px;
+  }
+
+  .rolldicebtn {
+    left: 28%;
+    font-size: 8px;
+  }
+
+  .hold-btn {
+    left: 50.7%;
+    font-size: 8px;
+  }
+
+  .diceImgbox {
+    top: 22%;
+    left: 72%;
+  }
+
+  .diceImg {
+    width: 80px;
+    height: 80px;
+  }
+
+  #winning-scoreInput {
+    left: 35%;
+  }
+
+  .how-to-play {
+    line-height: 1.6;
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="icon" sizes="32x32" href="./images/instruction.png">
+    <link rel="stylesheet" href="./Dice.css">
+    <title>DICE GAME</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="player-box player1-panel active">
+            <h1 id="player1-id">PLAYER 1 <span class="active-indicator"></span> </h1>
+
+            <div class="totalscore" id="player1-totalscore"> 0 </div>
+
+            <div class="current-score" id="player1-currentscore"> 0 </div>
+        </div>
+
+
+        <div class="player-box player2-panel">
+            <h1 id="player2-id">PLAYER 2 <span class=""></span> </h1>
+
+            <div class="totalscore" id="player2-totalscore"> 0 </div>
+
+            <div class="current-score" id="player2-currentscore"> 0 </div>
+        </div>
+
+        <button class="new-gamebtn" id="btn-newgame">
+            <img src="./images/newgame.png" width="20px" alt="">
+            NEW GAME</button>
+
+        <button class="rolldicebtn" id="btn-roll">
+            <img src="./images/roll.png" width="20px" alt="">
+            ROLL DICE</button>
+
+        <button class="hold-btn" id="btn-hold">
+            <img src="./images/hold.png" width="20px" alt="">
+            HOLD</button>
+
+        <input type="number" id="winning-scoreInput" placeholder="Winning Score">
+
+        <img src="./images/instruction.png" class="instructions" title="How To Play Instructions"
+            alt="How to play Instructions">
+
+
+        <div class="diceImgbox">
+            <img src="./images/dice-1.png" class="diceImg" id="dice-img1" alt="">
+            <img src="./images/dice-1.png" class="diceImg" id="dice-img2" alt="">
+        </div>
+
+    </div>
+
+    <div class="blur_background"> </div>
+
+    <div class="how-to-play">
+        <h3> INSTRUCTIONS - How To Play</h3>
+
+        <p id="note">Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to
+            "hold":
+        <ul>
+            <li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+            <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.
+            </li>
+            <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next
+                player's turn.
+            </li>
+        </ul>
+        The Black Panel indicates the active player.
+        The first player to score 50 or more points wins.
+        The winning score can be changed from the default score of 50 to your preferred score by setting it in the
+        'Winning Score' input.
+        </p> <br>
+
+        <button id="start">Start Game</button>
+    </div>
+
+    <script type="text/javascript" src="./Dice.js"></script>
+
+</body>
+
+</html>

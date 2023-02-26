@@ -180,7 +180,7 @@ button:hover {
   border-radius: 20px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2em;
-  line-height: 2.5;
+  line-height: 1.8;
   text-align: center;
   letter-spacing: 1px;
   position: fixed;
@@ -260,9 +260,10 @@ button:hover {
   }
 
   .how-to-play {
-    width: 87%;
+    width: 88%;
     padding: 15px;
-    line-height: 2.2;
+    top: 5%;
+    line-height: 2;
     left: 6.5%;
   }
 
@@ -288,8 +289,8 @@ button:hover {
 
   .how-to-play {
     padding: 10px;
-    top: 7%;
-    line-height: 2;
+    font-size: 1.1em;
+    line-height: 1.9;
   }
 }
 
@@ -332,25 +333,17 @@ button:hover {
   .instructions {
     left: 4%;
   }
-
-  .how-to-play {
-    font-size: 1.1em;
-    width: 90%;
-    left: 4.7%;
-    line-height: 2;
-  }
 }
 
 @media screen and (max-width: 650px) {
   body {
-    padding: 10px 15px 50px 15px;
+    padding: 20px 10px 50px;
   }
 
   .container {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    width: 70;
   }
 
   .player-box {
@@ -377,28 +370,28 @@ button:hover {
   }
 
   .instructions {
-    top: 3%;
+    top: 4%;
     left: 80%;
   }
 
   .new-gamebtn {
-    top: 44%;
+    top: 44.5%;
     left: 4%;
-    font-size: 10px;
+    font-size: 11px;
     padding: 9px 8px;
   }
 
   .rolldicebtn {
-    top: 44%;
+    top: 44.5%;
     left: 26.5%;
-    font-size: 10px;
+    font-size: 11px;
     padding: 9px 8px;
   }
 
   .hold-btn {
-    top: 44%;
+    top: 44.5%;
     left: 49%;
-    font-size: 10px;
+    font-size: 11px;
     padding: 9px 20px;
   }
 
@@ -408,9 +401,11 @@ button:hover {
   }
 
   #winning-scoreInput {
-    left: 39%;
+    left: 40%;
     top: 93.5%;
+    width: 150px;
     font-size: 0.8em;
+    box-shadow: 0 0 5px #000;
   }
 
   .diceImgbox {
@@ -429,9 +424,11 @@ button:hover {
   }
 
   .how-to-play {
-    left: 5%;
+    width: 90%;
+    top: 7%;
+    left: 6%;
     padding: 10px 15px;
-    line-height: 2;
+    line-height: 1.7;
   }
 }
 
@@ -461,35 +458,33 @@ button:hover {
 
   .how-to-play {
     width: 92%;
-    top: 4%;
     left: 5%;
-    line-height: 1.8;
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
   .player-box {
-    height: 45%;
+    height: 46%;
   }
 
   .new-gamebtn {
-    left: 5%;
-    font-size: 8px;
+    left: 4%;
+    font-size: 9px;
   }
 
   .rolldicebtn {
     left: 28%;
-    font-size: 8px;
+    font-size: 9px;
   }
 
   .hold-btn {
-    left: 50.7%;
-    font-size: 8px;
+    left: 51.5%;
+    font-size: 9px;
   }
 
   .diceImgbox {
     top: 22%;
-    left: 72%;
+    left: 72.5%;
   }
 
   .diceImg {
@@ -503,10 +498,10 @@ button:hover {
 
   .how-to-play {
     width: 95%;
-    top: 6%;
+    top: 5%;
     left: 3%;
-    font-size: 1.06em;
     padding: 10px 5px;
+    font-size: 1.1em;
     line-height: 1.6;
   }
 }

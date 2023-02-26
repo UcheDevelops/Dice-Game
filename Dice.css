@@ -35,7 +35,7 @@ body {
 }
 
 .player-box {
-  background-color: #00000025;
+  background-color: #00000045;
   height: 100%;
   width: 50%;
   border: 1px solid #000000;
@@ -64,6 +64,11 @@ body {
   font-weight: bold;
   font-size: 6em;
   color: red;
+  background-color: #ffffffbb;
+  width: 105px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0 auto;
 }
 
 .current-score {
@@ -337,7 +342,7 @@ button:hover {
 
 @media screen and (max-width: 650px) {
   body {
-    padding: 20px 10px 50px;
+    padding: 45px 10px;
   }
 
   .container {
@@ -370,26 +375,26 @@ button:hover {
   }
 
   .instructions {
-    top: 4%;
+    top: 7%;
     left: 80%;
   }
 
   .new-gamebtn {
-    top: 44.5%;
+    top: 47.5%;
     left: 4%;
     font-size: 11px;
     padding: 9px 8px;
   }
 
   .rolldicebtn {
-    top: 44.5%;
+    top: 47.5%;
     left: 26.5%;
     font-size: 11px;
     padding: 9px 8px;
   }
 
   .hold-btn {
-    top: 44.5%;
+    top: 47.5%;
     left: 49%;
     font-size: 11px;
     padding: 9px 20px;
@@ -402,7 +407,7 @@ button:hover {
 
   #winning-scoreInput {
     left: 40%;
-    top: 93.5%;
+    top: 94%;
     width: 150px;
     font-size: 0.8em;
     box-shadow: 0 0 5px #000;
@@ -411,7 +416,7 @@ button:hover {
   .diceImgbox {
     background-color: rgba(0, 0, 0, 0.8);
     gap: 130px;
-    top: 22%;
+    top: 29%;
     left: 74%;
   }
 
@@ -433,10 +438,6 @@ button:hover {
 }
 
 @media screen and (max-width: 530px) {
-  body {
-    padding: 10px 10px 50px 10px;
-  }
-
   .new-gamebtn {
     padding: 9px 2px;
     font-weight: 900;
@@ -473,23 +474,22 @@ button:hover {
   }
 
   .rolldicebtn {
-    left: 28%;
+    left: 28.7%;
     font-size: 9px;
   }
 
   .hold-btn {
-    left: 51.5%;
+    left: 53%;
     font-size: 9px;
   }
 
   .diceImgbox {
-    top: 22%;
-    left: 72.5%;
+    left: 74%;
   }
 
   .diceImg {
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
   }
 
   #winning-scoreInput {

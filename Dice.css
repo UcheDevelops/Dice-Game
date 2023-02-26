@@ -155,36 +155,37 @@ button:hover {
 }
 
 .winner {
-  background-color: #62ed52;
+  background-color: #16ce02;
 }
 
 .blur_background {
-  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 100%;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
   z-index: 5;
 }
 
 .how-to-play {
-  background-color: #000;
+  background-color: #1a1919;
   border: 3px solid #fff;
   box-shadow: 0 0 20px #000;
-  /* opacity: ; */
+  /* opacity: 0.5; */
   color: #fff;
-  width: 60%;
+  width: 80%;
   padding: 20px;
   border-radius: 20px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2em;
-  line-height: 1.5;
+  line-height: 2.5;
   text-align: center;
   letter-spacing: 1px;
-  position: absolute;
-  top: 5%;
-  left: 20%;
+  position: fixed;
+  top: 10%;
+  left: 10%;
   z-index: 10;
 }
 
@@ -222,7 +223,7 @@ button:hover {
 }
 
 /* MOBILE RESPONSIVENESS */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
   body {
     padding: 30px 60px;
   }
@@ -259,11 +260,10 @@ button:hover {
   }
 
   .how-to-play {
-    width: 70%;
+    width: 87%;
     padding: 15px;
-    font-size: 1.2em;
-    line-height: 1.6;
-    left: 15%;
+    line-height: 2.2;
+    left: 6.5%;
   }
 
   .instructions {
@@ -287,8 +287,9 @@ button:hover {
   }
 
   .how-to-play {
-    font-size: 1.15em;
-    line-height: 1.5;
+    padding: 10px;
+    top: 7%;
+    line-height: 2;
   }
 }
 
@@ -333,8 +334,10 @@ button:hover {
   }
 
   .how-to-play {
-    width: 85%;
-    left: 8%;
+    font-size: 1.1em;
+    width: 90%;
+    left: 4.7%;
+    line-height: 2;
   }
 }
 
@@ -366,7 +369,7 @@ button:hover {
 
   .player-box .totalscore {
     font-size: 70px;
-    text-shadow: 0 0 5px #000;
+    text-shadow: 0 0 1px #000;
   }
 
   .player-box .current-score {
@@ -426,15 +429,13 @@ button:hover {
   }
 
   .how-to-play {
-    padding: 5px;
-    width: 85%;
-    left: 8%;
-    font-size: 1.05em;
-    line-height: 1.6;
+    left: 5%;
+    padding: 10px 15px;
+    line-height: 2;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 530px) {
   body {
     padding: 10px 10px 50px 10px;
   }
@@ -459,10 +460,10 @@ button:hover {
   }
 
   .how-to-play {
-    width: 90%;
-    left: 6%;
-    font-size: 0.9em;
-    line-height: 2;
+    width: 92%;
+    top: 4%;
+    left: 5%;
+    line-height: 1.8;
   }
 }
 
@@ -501,6 +502,11 @@ button:hover {
   }
 
   .how-to-play {
+    width: 95%;
+    top: 6%;
+    left: 3%;
+    font-size: 1.06em;
+    padding: 10px 5px;
     line-height: 1.6;
   }
 }

@@ -132,8 +132,14 @@ winningScoreInput.addEventListener("change", () => {
   winningScore = Number(winningScoreInput.value);
 });
 
-startGame.addEventListener("click", () => {
+startGame.addEventListener("click", (e) => {
+  e.stopPropagation();
   document.getElementsByClassName("how-to-play")[0].style.display = "none";
+  document.querySelector(".blur_background").style.display = "none";
+});
+
+document.addEventListener("click", () => {
+  document.querySelector(".how-to-play")[0].style.display = "none";
   document.querySelector(".blur_background").style.display = "none";
 });
 
